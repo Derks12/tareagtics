@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <style>
+        .estilo {
+            margin-left: 500px;
+            margin-top: 100px;
+            align-self: center;
+            width: 600px;
+            background-color: black
+        }
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
@@ -8,16 +17,15 @@
 </head>
 <body>
 
-
-    <div class="grid text-center" style="background-color: black">
+    <div class="estilo">
         <div class="text-center">
             <img src="..\git_logo.png" class="rounded" alt="...">
             <form>
                     <legend style="color: white">Bienvenidos a GTICS</legend>
-                    <div class="mb-3">
+                    <div class="mb-3" style="width: 550px; margin-left: 25px" >
                         <input type="text" id="Codigo PUCP" class="form-control" placeholder="Código PUCP">
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3" style="width: 550px; margin-left: 25px" >
                         <input type="text" id="contraseña" class="form-control" placeholder="Contraseña">
                     </div>
                     <button type="submit" class="btn btn-primary">Ingresar</button>
