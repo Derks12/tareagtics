@@ -10,14 +10,16 @@
                     <div th:if="${errorCompany != null}" th:text="${errorCompany}" class="alert alert-danger"
                          role="alert"></div>
                     <hr/>
-                    <form method="post" th:action="@{'/shipper/save'}">
+                    <form method="post" th:action="@{'/shipper/save'}" th:object="${shipper}">
                         <div class="mb-3">
+                            <input name="companyName" th:field="*{shipperId}" type="hidden" class="form-control">
                             <label for="companyName" class="form-label">Nombre de la compañía</label>
-                            <input name="companyName" type="text" class="form-control" id="companyName">
+                            <input name="companyName" type="text" class="form-control" id = "companyName" th:field="*{companyName}">
                         </div>
                         <div class="mb-3">
+                            <input name="phone" th:field="*{shipperId}" type="hidden" class="form-control">
                             <label for="phone" class="form-label">Teléfono</label>
-                            <input name="phone" type="text" class="form-control" id="phone">
+                            <input name="phone" type="text" class="form-control" id="phone" th:field="*{phone}">
                         </div>
                         <a th:href="@{'/shipper/list'}" class="btn btn-danger">Cancelar</a>
                         <button type="submit" class="btn btn-primary">Registrar</button>
